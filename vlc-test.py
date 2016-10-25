@@ -12,14 +12,22 @@ media = vlc_instance.media_new_path('/home/os/Code/python-scripts/assets/male.jp
 
 
 media_list = vlc_instance.media_list_new()
+media_list.add_media(media)
+media = vlc_instance.media_new_path('/home/os/Code/python-scripts/assets/female.jpg')
+media_list.add_media(media)
 media_list.add_media(vlc_instance.media_new('/home/os/Code/python-scripts/assets/movie.mp4'))
 
-media_list.add_media(media)
-
 mlplayer = vlc_instance.media_list_player_new()
-
 mlplayer.set_media_list(media_list)
 
+mplayer = vlc_instance.media_player_new()
+#mplayer.set_media(media)
+mplayer.set_fullscreen(True)
+mlplayer.set_media_player(mplayer)
 mlplayer.play()
 
-time.sleep(10)
+
+#mplayer.play()
+
+
+time.sleep(30)

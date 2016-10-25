@@ -4,6 +4,9 @@ import json
 import urllib 
 import uuid
 
+face_recog_api = 'http://rrpp22.azurewebsites.net/api/video/process'
+content_sync_api = 'http://rrpp22.azurewebsites.net/api/sync/latest/11' 
+
 #Open image file from camera
 with open('dafuq.jpeg', 'rb') as image_file:
     encoded_string = base64.b64encode(image_file.read())
